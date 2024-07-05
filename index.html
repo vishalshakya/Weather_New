@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="./image/weather.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!----------------------------- Header ---------------------------->
+    <header class="blur_back">
+      <div class="icon">Weather App</div>
+      <div class="search">
+        <input
+          type="text"
+          id="text_input"
+          placeholder="Enter City Name"
+          required
+        />
+        <button class="fa-solid fa-magnifying-glass" id="search"></button>
+      </div>
+    </header>
+    <!----------------------------- error  ---------------------------->
+
+    <div class="error blur_back">
+      <h2>Please enter valid city Name,Thank you</h2>
+    </div>
+    <!----------------------------- Current Weather ---------------------------->
+
+    <div class="main">
+      <div class="current_weather blur_back">
+        <div class="img">
+          <img id="image" src="./image/clear.png" alt="" />
+        </div>
+        <div class="temp">
+          <p><span id="cel"></span><sup>°C</sup></p>
+          <p><span id="far"></span> <sup>°F</sup></p>
+        </div>
+        <div class="detail_current">
+          <p>Humidity <span id="hum"></span></p>
+          <p>Wind <span id="wind"></span>km/h</p>
+        </div>
+      </div>
+      <div class="more_detail blur_back">
+        <h1>Weather</h1>
+
+        <h2 id="city">City</h2>
+        <p id="feel">Feel like</p>
+      </div>
+    </div>
+    <!----------------------------- Five day forecast---------------------------->
+
+    <div class="days blur_back">
+      <!-- <div class="day">
+        
+        <p>Sat</p>
+        <img src="./image/clear.png" width="100px" alt="" />
+        <p><span>max</span> <span>mini</span></p>
+      </div> -->
+    </div>
+    <!----------------------------- Script file ---------------------------->
+
+    <script
+      src="https://kit.fontawesome.com/f97e174d34.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

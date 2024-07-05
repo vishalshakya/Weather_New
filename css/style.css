@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.blur_back {
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 0px 30px rgba(51, 54, 74, 0.37);
+  border: 2px solid rgba(159, 153, 153, 0.18);
+}
+/* ----------------------------- Header ---------------------------- */
+html,
+body {
+  background: url(../image/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon {
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: default;
+}
+.icon:hover {
+  color: rgb(38, 38, 40);
+}
+#text_input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+}
+#text_input:hover {
+  background-color: rgb(221, 221, 235);
+  color: white;
+}
+#search {
+  /* margin: 10px; */
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#search:hover {
+  /* margin: 10px; */
+  background-color: rgb(221, 221, 235);
+  color: black;
+}
+/* -----------------------------Error ---------------------------- */
+
+.error {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+/* ----------------------------- Current weather ---------------------------- */
+
+.main {
+  display: none;
+  justify-content: space-evenly;
+  color: rgb(239, 232, 232);
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.current_weather {
+  display: flex;
+  width: 50%;
+  border-radius: 20px;
+
+  /* justify-content: space-around; */
+}
+.img {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* justify-content: center; */
+
+  text-align: center;
+  /* background-color: red; */
+}
+.img img {
+  width: 200px;
+  object-fit: contain;
+}
+.temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  padding: 20px;
+
+  /* background-color: green; */
+  letter-spacing: 2px;
+}
+.detail_current {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: yellow; */
+  letter-spacing: 2px;
+  padding: 20px;
+}
+.more_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  width: 10%;
+}
+/* ----------------------------- Five day forecast ---------------------------- */
+
+.days {
+  display: none;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  border-radius: 20px;
+  color: whitesmoke;
+}
+.day {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+/* ----------------------------- Max Width 1200-px ---------------------------- */
+
+@media screen and (max-width: 1200px) {
+  .main {
+    display: none;
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    margin: 20px;
+  }
+  .current_weather {
+    width: 100%;
+
+    margin-top: 20px;
+    /* justify-content: space-around; */
+  }
+  .more_detail {
+    width: 50%;
+    align-items: center;
+  }
+  .days {
+    display: none;
+    flex-wrap: wrap;
+  }
+}
+/* -----------------------------Max width 700px ---------------------------- */
+
+@media screen and (max-width: 700px) {
+  .current_weather {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
+
+    /* justify-content: space-around; */
+  }
+  .more_detail {
+    width: 50%;
+    align-items: center;
+  }
+  .days {
+    display: none;
+
+    flex-wrap: wrap;
+  }
+  .error {
+    padding: 10px;
+  }
+}
+/* ----------------------------- Max width 340px ---------------------------- */
+
+@media screen and (max-width: 340px) {
+  header {
+    text-align: center;
+  }
+  .more_detail {
+    width: 85%;
+    align-items: center;
+  }
+  #text_input {
+    padding: 5px 20px 5px 20px;
+  }
+
+  #search {
+    /* margin: 10px; */
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
+  }
+}
