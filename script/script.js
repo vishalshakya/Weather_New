@@ -87,6 +87,12 @@ buttonInp.addEventListener("click", async () => {
     city.innerHTML = `${currentData.name}`;
     const feel = document.getElementById("feel");
     feel.innerHTML = `${currentData.weather[0].description}`;
+     const clock = document.getElementById("date");
+    setInterval(function () {
+      let date = new Date();
+      // console.log(date.toLocaleTimeString());
+      clock.innerHTML = date.toLocaleTimeString();
+    }, 1000);
   }
   /* ----------------------------- 5 day forecast weather---------------------------- */
 
